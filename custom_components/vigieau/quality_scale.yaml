@@ -1,0 +1,151 @@
+rules:
+  # Bronze
+  action-setup:
+    status: exempt
+    comment: |
+      This integration does not provide additional actions.
+  appropriate-polling: done
+  brands: done
+  common-modules: done
+  config-flow-test-coverage:
+    status: exempt
+    comment: |
+      This integration does not provide a config flow test.
+  config-flow: done
+  dependency-transparency: done
+  docs-actions:
+    status: exempt
+    comment: |
+      This integration does not provide actions.
+  docs-high-level-description:
+    status: exempt
+    comment: |
+      This integration does not provide a high-level description.
+  docs-installation-instructions:
+    status: exempt
+    comment: |
+      This integration does not provide installation instructions.
+  docs-removal-instructions:
+    status: exempt
+    comment: |
+      This integration does not provide removal instructions.
+  entity-event-setup:
+    status: exempt
+    comment: |
+      Entities of this integration does not explicitly subscribe to events.
+  entity-unique-id: done
+  has-entity-name: done
+  runtime-data: done
+  test-before-configure:
+    status: exempt
+    comment: |
+      This integration does not provide additional actions.
+  test-before-setup:
+    status: exempt
+    comment: |
+      This integration does not provide additional actions.
+  unique-config-entry: done
+  # Silver
+  action-exceptions:
+    status: exempt
+    comment: |
+      This integration does not provide additional actions.
+  config-entry-unloading: done
+  docs-configuration-parameters:
+    status: exempt
+    comment: |
+      This integration does not provide configuration parameters.
+  docs-installation-parameters:
+    status: exempt
+    comment: |
+      This integration does not provide installation parameters.
+  entity-unavailable: done
+  integration-owner: done
+  log-when-unavailable:
+    status: exempt
+    comment: |
+      This integration does not provide additional actions.
+  parallel-updates:
+    status: exempt
+    comment: |
+      This integration does not provide parallel updates.
+  reauthentication-flow:
+    status: exempt
+    comment: |
+      This integration does not provide a reauthentication flow.
+  test-coverage: todo
+  # Gold
+  devices: done
+  diagnostics:
+    status: exempt
+    comment: |
+      This integration does not provide diagnostics.
+  discovery-update-info:
+    status: exempt
+    comment: |
+      This integration does not provide discovery update information.
+  discovery:
+    status: exempt
+    comment: |
+      This integration does not provide discovery.
+  docs-data-update:
+    status: exempt
+    comment: |
+      This integration does not provide data updates.
+  docs-examples:
+    status: exempt
+    comment: |
+      This integration does not provide examples.
+  docs-known-limitations:
+    status: exempt
+    comment: |
+      This integration does not have known limitations.
+  docs-supported-devices:
+    status: exempt
+    comment: |
+      This integration does not provide supported devices.
+  docs-supported-functions:
+    status: exempt
+    comment: |
+      This integration does not provide supported functions.
+  docs-troubleshooting:
+    status: exempt
+    comment: |
+      This integration does not provide troubleshooting information.
+  docs-use-cases:
+    status: exempt
+    comment: |
+      This integration does not provide use cases.
+  dynamic-devices:
+    status: exempt
+    comment: |
+      This integration has one device per config entry.
+  entity-category: done
+  entity-device-class: done
+  entity-disabled-by-default:
+    status: exempt
+    comment: |
+      This integration does not provide entities that are disabled by default.
+  entity-translations: done
+  exception-translations:
+    status: exempt
+    comment: |
+      This integration does not provide exceptions that require translations.
+  icon-translations:
+  reconfiguration-flow:
+    status: exempt
+    comment: |
+      This integration doesn't have any cases where a reconfiguration is needed.
+  repair-issues:
+    status: exempt
+    comment: |
+      This integration does not provide repair issues.
+  stale-devices:
+    status: exempt
+    comment: |
+      This integration does not provide stale devices.
+
+  # Platinum
+  async-dependency: done
+  inject-websession: done
+  strict-typing: done

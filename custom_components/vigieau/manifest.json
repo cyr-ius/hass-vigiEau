@@ -1,0 +1,15 @@
+{
+  "domain": "vigieau",
+  "name": "VigiEau",
+  "codeowners": ["@cyr-ius"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://www.home-assistant.io/integrations/vigieau",
+  "homekit": {},
+  "iot_class": "cloud_polling",
+  "quality_scale": "bronze",
+  "requirements": ["addressesfrpy==1.2.0", "vigieaupy==1.0.0"],
+  "ssdp": [],
+  "version": "1.0.0",
+  "zeroconf": []
+}

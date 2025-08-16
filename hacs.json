@@ -1,0 +1,6 @@
+{
+  "name": "VigiEau",
+  "country": ["FR"],
+  "homeassistant": "2025.8.1",
+  "render_readme": true
+}

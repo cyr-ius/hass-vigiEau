@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Recherchez votre ville. Saisissez le nom de votre ville ou les coordonnées.\n Le nom de la ville est pris en priorité si le nom et les coordonnées sont fournies. ",
+        "data": {
+          "address": "Nom de la ville",
+          "target": "Coordonnées",
+          "longitude": "Longitude",
+          "latitude": "Latitude"
+        }
+      },
+      "finish": {
+        "title": "Configuration terminée",
+        "description": "The Vigieau integration a été configurée avec succès.",
+        "data": {
+          "location": "Location"
+        }
+      }
+    },
+    "error": {
+      "unknown": "Erreur interne.",
+      "data_fetch_error": "Erreur lors de la récupération des données depuis l'API Vigieau.",
+      "invalid_location": "Location invalide fournie. Veuillez vérifier les coordonnées ou le nom de la ville.",
+      "address_not_found": "L'adresse spécifiée n'a pas pu être trouvée. Veuillez vérifier l'entrée et réessayer."
+    },
+    "abort": {
+      "already_configured": "Déjà configuré.",
+      "no_address_provided": "Pas d'adresse fournie. Veuillez entrer un nom de ville ou des coordonnées valides."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Search your city. Set input to your city name or coordinates.",
+        "data": {
+          "address": "City name",
+          "target": "Coordinates",
+          "longitude": "Longitude",
+          "latitude": "Latitude"
+        }
+      },
+      "finish": {
+        "title": "Configuration complete",
+        "description": "The Vigieau integration has been successfully configured.",
+        "data": {
+          "location": "Location"
+        }
+      }
+    },
+    "error": {
+      "unknown": "Internal error.",
+      "data_fetch_error": "Error fetching data from Vigieau API.",
+      "invalid_location": "Invalid location provided. Please check the coordinates or city name.",
+      "address_not_found": "The specified address could not be found. Please check the input and try again."
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]",
+      "no_address_provided": "No address provided. Please enter a valid city name or coordinates."
+    }
+  }
+}
