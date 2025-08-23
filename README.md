@@ -1,58 +1,49 @@
-# Bouygues Bbox Router
+# VigiEau — Water consumption monitoring for Home Assistant
 
-This a _custom component_ for [Home Assistant](https://www.home-assistant.io/).
-The `bbox2` integration allows you to observe and control [Bbox router](http://www.bouygues.fr/).
+This custom integration for [Home Assistant](https://www.home-assistant.io/) integrates the French public service [VigiEau](https://vigieau.gouv.fr/) to monitor your household water consumption.
 
-There is currently support for the following device types within Home Assistant:
+## Features
 
-- Sensor with traffic metrics
-- Binary Sensor with wan status , public ip , private ip
-- Device tracker for connected devices (via option add wired devices)
-- Switch for enable/disable Wireless and Guest Wifi
-- Press button to restart box
-- Press button to ring phone
+- Sensors: daily, monthly and yearly water consumption.
+- Alerts: notifications for threshold breaches or detected anomalies.
+- Diagnostics: access to historical data and consumption statistics.
+- Compatibility: works with meters supported by the VigiEau service.
 
-![GitHub release](https://img.shields.io/github/release/Cyr-ius/hass-bbox2)
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-bouygues.svg)](https://github.com/hacs/integration)
+## Installation
+
+1. Install via HACS:
+   - Open HACS → Integrations → Explore & Add.
+   - Add the repository `cyr-ius/hass-vigiEau` to HACS.
+   - Search for "VigiEau" and install the integration.
+
+     [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=cyr-ius&repository=hass-heatzy&category=integration)
+
+   - Restart Home Assistant after installation.
+
+2. Manual install:
+   - Copy the integration folder to `custom_components/hass-vigiEau`.
+   - Restart Home Assistant.
+3. Add the integration:
+   - Go to Configuration → Integrations → Add Integration and search for "VigiEau".
+   - Follow the configuration flow to connect your VigiEau account.
+
+   [![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=vigieau)
 
 ## Configuration
 
-The preferred way to setup the Bouygues Bbox platform is by enabling the discovery component.
+- During first setup, provide your VigiEau account credentials to access meter data.
+- Configure alert thresholds and select which sensors to enable.
+- The integration uses Home Assistant's configuration flow (no YAML required).
 
-Add Bouygues Bbox module via HACS
+## Notes
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=cyr-ius&repository=hass-bbox2&category=integration)
+- Data is updated automatically according to the VigiEau service update frequency.
+- Alerts and diagnostics are available in the Home Assistant UI.
 
-Add your device via the Integration menu
+## Support
 
-[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=bbox2)
+For questions or feature requests, see the project documentation or open an issue on the GitHub repository.
 
-### Initial setup
+---
 
-You must have set a password for your Bbox router web administration page.
-
-The first time Home Assistant will connect to your Bbox, you will need to specify the password of bbox.
-
-### Supported routers
-
-Only the routers with Bbox OS are supported:
-
-- Bbox (all versions)
-
-## Presence Detection
-
-This platform offers presence detection by keeping track of the
-devices connected to a [Bbox](http://www.bouygues.fr/) router.
-
-Ability to disable this option by integration options
-
-### Notes
-
-Note that the Bbox waits for some time before marking a device as inactive, meaning that there will be a small delay (1 or 2 minutes) between the time you disconnect a device and the time it will appear as "away" in Home Assistant.
-
-You should take this into account when specifying the `consider_home` parameter.
-On the contrary, the Bbox immediately reports devices newly connected, so they should appear as "home" almost instantly, as soon as Home Assistant refreshes the devices states.
-
-## Sensor
-
-This platform offers you sensors to monitor a Bbox router. The monitored conditions are instant upload and download rates in Mb/s.
+_VigiEau is a public service that helps users monitor their water consumption and receive alerts in case of leaks or abnormal usage._
