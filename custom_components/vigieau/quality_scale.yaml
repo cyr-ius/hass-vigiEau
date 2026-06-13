@@ -7,10 +7,7 @@ rules:
   appropriate-polling: done
   brands: done
   common-modules: done
-  config-flow-test-coverage:
-    status: exempt
-    comment: |
-      This integration does not provide a config flow test.
+  config-flow-test-coverage: todo
   config-flow: done
   dependency-transparency: done
   docs-actions:
@@ -32,18 +29,12 @@ rules:
   entity-event-setup:
     status: exempt
     comment: |
-      Entities of this integration does not explicitly subscribe to events.
+      Entities of this integration do not explicitly subscribe to events.
   entity-unique-id: done
   has-entity-name: done
   runtime-data: done
-  test-before-configure:
-    status: exempt
-    comment: |
-      This integration does not provide additional actions.
-  test-before-setup:
-    status: exempt
-    comment: |
-      This integration does not provide additional actions.
+  test-before-configure: done
+  test-before-setup: done
   unique-config-entry: done
   # Silver
   action-exceptions:
@@ -61,18 +52,12 @@ rules:
       This integration does not provide installation parameters.
   entity-unavailable: done
   integration-owner: done
-  log-when-unavailable:
-    status: exempt
-    comment: |
-      This integration does not provide additional actions.
-  parallel-updates:
-    status: exempt
-    comment: |
-      This integration does not provide parallel updates.
+  log-when-unavailable: done
+  parallel-updates: done
   reauthentication-flow:
     status: exempt
     comment: |
-      This integration does not provide a reauthentication flow.
+      This integration does not require authentication.
   test-coverage: todo
   # Gold
   devices: done
@@ -83,15 +68,15 @@ rules:
   discovery-update-info:
     status: exempt
     comment: |
-      This integration does not provide discovery update information.
+      This integration does not support discovery.
   discovery:
     status: exempt
     comment: |
-      This integration does not provide discovery.
+      This integration does not support discovery.
   docs-data-update:
     status: exempt
     comment: |
-      This integration does not provide data updates.
+      This integration does not provide data update documentation.
   docs-examples:
     status: exempt
     comment: |
@@ -103,19 +88,19 @@ rules:
   docs-supported-devices:
     status: exempt
     comment: |
-      This integration does not provide supported devices.
+      This integration does not provide supported devices documentation.
   docs-supported-functions:
     status: exempt
     comment: |
-      This integration does not provide supported functions.
+      This integration does not provide supported functions documentation.
   docs-troubleshooting:
     status: exempt
     comment: |
-      This integration does not provide troubleshooting information.
+      This integration does not provide troubleshooting documentation.
   docs-use-cases:
     status: exempt
     comment: |
-      This integration does not provide use cases.
+      This integration does not provide use cases documentation.
   dynamic-devices:
     status: exempt
     comment: |
@@ -125,25 +110,25 @@ rules:
   entity-disabled-by-default:
     status: exempt
     comment: |
-      This integration does not provide entities that are disabled by default.
+      This integration does not provide entities disabled by default.
   entity-translations: done
   exception-translations:
     status: exempt
     comment: |
-      This integration does not provide exceptions that require translations.
-  icon-translations:
+      This integration does not provide exception translations.
+  icon-translations: todo
   reconfiguration-flow:
     status: exempt
     comment: |
-      This integration doesn't have any cases where a reconfiguration is needed.
+      This integration does not require reconfiguration.
   repair-issues:
     status: exempt
     comment: |
-      This integration does not provide repair issues.
+      This integration does not raise repair issues.
   stale-devices:
     status: exempt
     comment: |
-      This integration does not provide stale devices.
+      This integration has one device per config entry.
 
   # Platinum
   async-dependency: done
