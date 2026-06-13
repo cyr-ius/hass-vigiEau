@@ -2,31 +2,42 @@
   "config": {
     "step": {
       "user": {
-        "description": "Recherchez votre ville. Saisissez le nom de votre ville ou les coordonnées.\n Le nom de la ville est pris en priorité si le nom et les coordonnées sont fournies. ",
+        "description": "Recherchez votre commune par code postal ou nom.",
         "data": {
-          "address": "Nom de la ville",
-          "target": "Coordonnées",
-          "longitude": "Longitude",
-          "latitude": "Latitude"
+          "source": "Source d'eau",
+          "consumer": "Type de consommateur",
+          "code_postal": "Code postal",
+          "name": "Nom de la commune"
         }
       },
       "finish": {
-        "title": "Configuration terminée",
-        "description": "The Vigieau integration a été configurée avec succès.",
+        "title": "Sélection de la commune",
+        "description": "Sélectionnez votre commune dans la liste.",
         "data": {
-          "location": "Location"
+          "name": "Commune"
         }
       }
     },
     "error": {
-      "unknown": "Erreur interne.",
-      "data_fetch_error": "Erreur lors de la récupération des données depuis l'API Vigieau.",
-      "invalid_location": "Location invalide fournie. Veuillez vérifier les coordonnées ou le nom de la ville.",
-      "address_not_found": "L'adresse spécifiée n'a pas pu être trouvée. Veuillez vérifier l'entrée et réessayer."
+      "data_fetch_error": "Erreur lors de la récupération des données depuis l'API VigiEau.",
+      "invalid_location": "Localisation invalide. Vérifiez le code postal ou le nom de la commune."
     },
     "abort": {
       "already_configured": "Déjà configuré.",
-      "no_address_provided": "Pas d'adresse fournie. Veuillez entrer un nom de ville ou des coordonnées valides."
+      "invalid_location": "Localisation introuvable."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "gravity": {
+        "state": {
+          "alerte": "Alerte",
+          "alerte_renforcee": "Alerte renforcée",
+          "critique": "Critique",
+          "normal": "Normal",
+          "vigilance": "Vigilance"
+        }
+      }
     }
   }
 }
