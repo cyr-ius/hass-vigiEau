@@ -2,6 +2,8 @@
 
 This custom integration for [Home Assistant](https://www.home-assistant.io/) integrates the French public service [VigiEau](https://vigieau.gouv.fr/) to monitor your household water consumption.
 
+![downloads](https://img.shields.io/badge/dynamic/json?color=41BDF5&logo=home-assistant&label=integration%20usage&suffix=%20installs&cacheSeconds=15600&url=https://analytics.home-assistant.io/custom_integrations.json&query=$.vigieau.total)
+
 ## Features
 
 - Sensors: daily, monthly and yearly water consumption.
