@@ -21,18 +21,16 @@ def find_item(data: dict[str, Any], key_chain: str, default: Any = None) -> Any:
         >>> find_item({"a": {"b": [{"c": "value"}]}}, "a.b.1.c", "default")
         "default"
     """
-    if (keys := key_chain.split(".")) and isinstance(keys, list):
-        for key in keys:
-            if isinstance(data, dict):
-                data = data.get(key)
-            elif (
-                isinstance(data, list)
-                and len(data) > 0
-                and key.isdigit()
-                and int(key) < len(data)
-            ):
-                data = data[int(key)]
-    return default if data is None and default is not None else data
+    for key in key_chain.split("."):
+        if isinstance(data, dict):
+            data = data.get(key)
+        elif isinstance(data, list) and key.isdigit() and int(key) < len(data):
+            data = data[int(key)]
+        else:
+            return default
+        if data is None:
+            break
+    return data if data is not None else default
 
 
 def find_root_item(
@@ -56,6 +54,8 @@ def find_root_item(
         "not found
 
     """
+    if not data:
+        return default
     for item in data:
         if contains_key_value(item, key, value):
             return item
